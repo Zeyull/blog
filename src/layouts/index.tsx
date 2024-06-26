@@ -1,21 +1,18 @@
-import { Link, Outlet } from 'umi';
-import styles from './index.less';
+import Header from '@/components/Header';
+import { Layout } from 'antd';
+import { Content, Footer } from 'antd/es/layout/layout';
+import { Outlet } from 'umi';
 
-export default function Layout() {
+export default function BaseLayout() {
   return (
-    <div className={styles.navs}>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/docs">Docs</Link>
-        </li>
-        <li>
-          <a href="https://github.com/umijs/umi">Github</a>
-        </li>
-      </ul>
-      <Outlet />
-    </div>
+    <Layout>
+      <Header></Header>
+      <Content style={{ padding: '0 28px', minHeight: '240px' }}>
+        <Outlet />
+      </Content>
+      <Footer style={{ textAlign: 'center' }}>
+        Ant Design ©{new Date().getFullYear()} Created by Ant UED
+      </Footer>
+    </Layout>
   );
 }
