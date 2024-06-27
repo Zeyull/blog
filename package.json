@@ -16,6 +16,7 @@
     "**/*": "prettier --write --ignore-unknown"
   },
   "dependencies": {
+    "@ant-design/icons": "^5.3.7",
     "antd": "^5.18.3",
     "umi": "^4.2.13"
   },
