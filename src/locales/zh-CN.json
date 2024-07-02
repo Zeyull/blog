@@ -5,5 +5,10 @@
   "home_header_link_blog": "博客",
   "home_header_link_other": "其他",
 
-  "home_search_placeholder": "功能暂未开放"
+  "home_search_placeholder": "功能暂未开放",
+
+  "chronicle_event_label": "事记",
+  "chronicle_event_update_line_label": "update",
+  "chronicle_event_end_line_label": "end",
+  "chronicle_events_label_start": "个人网站开始搭建"
 }

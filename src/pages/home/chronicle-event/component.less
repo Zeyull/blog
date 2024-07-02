@@ -1,0 +1,40 @@
+.card {
+  width: 100%;
+  height: 400px;
+
+  .event {
+    display: flex;
+
+    .icon {
+      margin-right: @margin-xs;
+      height: 20px;
+    }
+
+    .date {
+      margin-right: @margin-sm;
+      color: @text-color-secondary;
+    }
+  }
+
+  .line {
+    display: flex;
+    color: @text-color-secondary;
+  }
+
+  .update {
+    margin-bottom: @margin-xs;
+  }
+
+  .end {
+    margin-top: @margin-xs;
+  }
+
+  .line::after,
+  .line::before {
+    content: '';
+    display: block;
+    margin: @margin-sm;
+    width: 50%;
+    border-top: 0.5px solid @text-color-secondary;
+  }
+}

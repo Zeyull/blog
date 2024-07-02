@@ -2,7 +2,10 @@ import { defineConfig } from 'umi';
 
 export default defineConfig({
   plugins: ['@umijs/plugins/dist/locale', '@umijs/plugins/dist/antd'],
-  routes: [{ path: '/', component: 'index' }],
+  routes: [
+    { path: '/home', component: '@/pages/home/index.tsx' },
+    { path: '/', redirect: '/home' },
+  ],
   npmClient: 'pnpm',
   locale: {
     default: 'zh-CN',

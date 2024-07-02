@@ -1,6 +1,6 @@
 import imgHead from '@/assets/head-img.jpg';
 import { FormattedMessage, Link } from 'umi';
-import HeaderSearch from '../HeaderSearch';
+import HeaderSearch from '../header-search';
 import styles from './component.less';
 
 interface HomeLink {

@@ -1,16 +1,17 @@
-import Header from '@/components/Header';
+import Header from '@/components/header';
 import { Layout } from 'antd';
 import { Content, Footer } from 'antd/es/layout/layout';
 import { Outlet } from 'umi';
+import styles from './index.less';
 
 export default function BaseLayout() {
   return (
     <Layout>
       <Header></Header>
-      <Content style={{ padding: '0 28px', minHeight: '240px' }}>
+      <Content className={styles.content}>
         <Outlet />
       </Content>
-      <Footer style={{ textAlign: 'center' }}>
+      <Footer style={{ textAlign: 'center', height: '64px' }}>
         Ant Design ©{new Date().getFullYear()} Created by Ant UED
       </Footer>
     </Layout>
