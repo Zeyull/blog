@@ -37,8 +37,7 @@ export default function ChronicleEvent() {
               {item.icon}
               <span className={styles.date}>{item.date}</span>
               <span className={styles.label}>
-                {' '}
-                <FormattedMessage id={item.label} />{' '}
+                <FormattedMessage id={item.label} />
               </span>
             </div>
           );
