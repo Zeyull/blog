@@ -1,6 +1,7 @@
 import articleImg1 from '@/assets/article-01.png';
 import articleImg2 from '@/assets/article-02.png';
-import { Card, Image } from 'antd';
+import { Card, Image, Popover } from 'antd';
+import { useEffect, useRef, useState } from 'react';
 import styles from './component.less';
 
 interface ArticleInfo {
@@ -33,9 +34,23 @@ const ArticleInfos: Array<ArticleInfo> = [
   },
 ];
 
-// 2024/7/4 todo
-// 标题省略时弹出tips提示全称
 export default function ArticleCard() {
+  const titleRef = useRef<Array<HTMLParagraphElement>>([]);
+  const [popOverKey, setPopOverKey] = useState('');
+
+  useEffect(() => {
+    // 使用key强制更新popover组件
+    setPopOverKey('popover');
+  }, []);
+
+  const isShowPopOver = (hasImg: boolean, index: number): boolean => {
+    const width = titleRef.current[index]?.offsetWidth ?? 0;
+    const noImgMaxWidth = 449;
+    const hasImgMaxWidth = 249;
+    const maxWidth = hasImg ? hasImgMaxWidth : noImgMaxWidth;
+    return width > maxWidth;
+  };
+
   return (
     <div className={styles['card-content']}>
       {ArticleInfos.map((item, index) => {
@@ -48,10 +63,18 @@ export default function ArticleCard() {
               }`}
             >
               <div className={styles['title-date']}>
-                <p
-                  className={styles.title}
-                  dangerouslySetInnerHTML={{ __html: item.title }}
-                ></p>
+                <Popover
+                  content={isShowPopOver(!!item.img, index) ? item.title : null}
+                  key={`${popOverKey}_${index}`}
+                >
+                  <p
+                    ref={(el) =>
+                      (titleRef.current[index] = el as HTMLParagraphElement)
+                    }
+                    className={styles.title}
+                    dangerouslySetInnerHTML={{ __html: item.title }}
+                  ></p>
+                </Popover>
                 <p className={styles.date}>{item.date}</p>
               </div>
               <div className={styles.line}></div>

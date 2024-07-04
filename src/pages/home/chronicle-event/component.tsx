@@ -20,6 +20,8 @@ const ChronicleEventInfos: Array<EventInfo> = [
   },
 ];
 
+// todo
+// 事记前加上icon或者emoji
 export default function ChronicleEvent() {
   return (
     <>
