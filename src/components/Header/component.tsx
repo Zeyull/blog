@@ -1,5 +1,7 @@
 import imgHead from '@/assets/head-img.jpg';
-import { FormattedMessage, Link } from 'umi';
+import { PlusOutlined } from '@ant-design/icons';
+import { Button } from 'antd';
+import { FormattedMessage, Link, history } from 'umi';
 import HeaderSearch from '../header-search';
 import styles from './component.less';
 
@@ -28,6 +30,10 @@ const Links: Array<HomeLink> = [
 ];
 
 export default function Header() {
+  const linkToCreate = () => {
+    history.push('/create-blog');
+  };
+
   return (
     <header className={styles.header}>
       <div className={styles['img-content']}>
@@ -47,6 +53,13 @@ export default function Header() {
       </div>
       <div className={styles['search-content']}>
         <HeaderSearch></HeaderSearch>
+        <Button
+          style={{ marginLeft: '16px' }}
+          type="primary"
+          shape="circle"
+          icon={<PlusOutlined />}
+          onClick={linkToCreate}
+        />
       </div>
     </header>
   );
