@@ -1,4 +1,9 @@
-import { EnvironmentTwoTone, HomeTwoTone } from '@ant-design/icons';
+import {
+  CustomerServiceTwoTone,
+  EnvironmentTwoTone,
+  HomeTwoTone,
+  SkinTwoTone,
+} from '@ant-design/icons';
 import { Card } from 'antd';
 import { ReactElement } from 'react';
 import { FormattedMessage } from 'umi';
@@ -13,6 +18,18 @@ interface EventInfo {
 }
 
 const ChronicleEventInfos: Array<EventInfo> = [
+  {
+    icon: <SkinTwoTone className={styles.icon} twoToneColor="#1890ff" />,
+    label: 'chronicle_events_label_start_fitness',
+    date: '2024-07-20',
+  },
+  {
+    icon: (
+      <CustomerServiceTwoTone className={styles.icon} twoToneColor="#1890ff" />
+    ),
+    label: 'chronicle_events_label_start_sing',
+    date: '2024-07-20',
+  },
   {
     icon: <EnvironmentTwoTone className={styles.icon} twoToneColor="#1890ff" />,
     label: 'chronicle_events_label_move_house',

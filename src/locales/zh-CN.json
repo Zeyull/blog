@@ -11,5 +11,7 @@
   "chronicle_event_update_line_label": "update",
   "chronicle_event_end_line_label": "end",
   "chronicle_events_label_start": "个人网站开始搭建",
-  "chronicle_events_label_move_house": "搬家！杭州 -> 成都"
+  "chronicle_events_label_move_house": "搬家！杭州 -> 成都",
+  "chronicle_events_label_start_sing": "学习唱歌！",
+  "chronicle_events_label_start_fitness": "开始健身！"
 }
