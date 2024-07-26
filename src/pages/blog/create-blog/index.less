@@ -1,4 +1,4 @@
-.content {
+.page {
   padding: @padding-lg;
   height: 700px;
 
@@ -17,6 +17,21 @@
     button {
       margin-right: calc(@margin-lg + @margin-md);
       width: 70px;
+    }
+  }
+
+  .content {
+    margin: @margin-lg 0;
+
+    .editor {
+      min-height: 400px;
+      height: calc(100vh - 120px);
+
+      :global {
+        .rc-md-navigation {
+          background-color: @white;
+        }
+      }
     }
   }
 }
