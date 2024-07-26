@@ -13,5 +13,9 @@
   "chronicle_events_label_start": "个人网站开始搭建",
   "chronicle_events_label_move_house": "搬家！杭州 -> 成都",
   "chronicle_events_label_start_sing": "学习唱歌！",
-  "chronicle_events_label_start_fitness": "开始健身！"
+  "chronicle_events_label_start_fitness": "开始健身！",
+  "chronicle_events_label_your_name": "君の名わ",
+
+  "blog_create_title_input_placeholder": "请输入文章标题",
+  "blog_create_button_label": "创建"
 }

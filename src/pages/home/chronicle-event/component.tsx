@@ -3,6 +3,7 @@ import {
   EnvironmentTwoTone,
   HomeTwoTone,
   SkinTwoTone,
+  VideoCameraTwoTone,
 } from '@ant-design/icons';
 import { Card } from 'antd';
 import { ReactElement } from 'react';
@@ -18,6 +19,11 @@ interface EventInfo {
 }
 
 const ChronicleEventInfos: Array<EventInfo> = [
+  {
+    icon: <VideoCameraTwoTone className={styles.icon} twoToneColor="#CE3030" />,
+    label: 'chronicle_events_label_your_name',
+    date: '2024-07-25',
+  },
   {
     icon: <SkinTwoTone className={styles.icon} twoToneColor="#1890ff" />,
     label: 'chronicle_events_label_start_fitness',
