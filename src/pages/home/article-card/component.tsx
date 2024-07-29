@@ -2,6 +2,7 @@ import articleImg1 from '@/assets/article-01.png';
 import articleImg2 from '@/assets/article-02.png';
 import { Card, Image, Popover } from 'antd';
 import { useEffect, useRef, useState } from 'react';
+import { history } from 'umi';
 import styles from './component.less';
 
 interface ArticleInfo {
@@ -51,11 +52,20 @@ export default function ArticleCard() {
     return width > maxWidth;
   };
 
+  const linkToDetail = () => {
+    history.push('/blog-detail');
+  };
+
   return (
     <div className={styles['card-content']}>
       {ArticleInfos.map((item, index) => {
         return (
-          <Card className={styles.card} key={index} hoverable>
+          <Card
+            className={styles.card}
+            key={index}
+            onClick={linkToDetail}
+            hoverable
+          >
             {item.img ? <Image src={item.img} /> : null}
             <div
               className={`${styles['text-content']} ${

@@ -9,6 +9,11 @@ export default defineConfig({
       component: '@/pages/blog/create-blog/index.tsx',
       layout: false,
     },
+    {
+      path: '/blog-detail',
+      component: '@/pages/blog/blog-detail/index.tsx',
+      layout: false,
+    },
     { path: '/', redirect: '/home' },
   ],
   npmClient: 'pnpm',
