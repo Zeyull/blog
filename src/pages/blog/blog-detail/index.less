@@ -1,12 +1,35 @@
 .page {
   padding: @padding-lg;
+  display: flex;
+  width: 100%;
 
-  .code {
-    padding: 0.2em 0.5em;
-    margin: 0;
-    font-size: 85%;
-    white-space: break-spaces;
-    background-color: #d0def166;
-    border-radius: calc(@border-radius-base * 3);
+  .main-context {
+    width: 60%;
+    order: 2;
+
+    .title {
+      margin-bottom: @margin-lg;
+      font-weight: 700;
+      font-size: calc(2 * @font-size-sm);
+    }
+
+    .code {
+      padding: 0.2em 0.5em;
+      margin: 0;
+      font-size: 85%;
+      white-space: break-spaces;
+      background-color: #d0def166;
+      border-radius: calc(@border-radius-base * 3);
+    }
+  }
+
+  .left-context {
+    order: 1;
+    width: 20%;
+  }
+
+  .right-context {
+    order: 3;
+    width: 20%;
   }
 }

@@ -12,7 +12,6 @@ export default defineConfig({
     {
       path: '/blog-detail',
       component: '@/pages/blog/blog-detail/index.tsx',
-      layout: false,
     },
     { path: '/', redirect: '/home' },
   ],
