@@ -5,11 +5,6 @@ export default defineConfig({
   routes: [
     { path: '/home', component: '@/pages/home/index.tsx' },
     {
-      path: '/create-blog',
-      component: '@/pages/blog/create-blog/index.tsx',
-      layout: false,
-    },
-    {
       path: '/blog-detail',
       component: '@/pages/blog/blog-detail/index.tsx',
     },
